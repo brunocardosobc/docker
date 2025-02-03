@@ -1,5 +1,3 @@
----
-
 ## **Nginx Proxy Manager - Docker Compose**
 
 Este repositório contém um **Docker Compose** para configurar e executar o **[Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager)**, uma interface gráfica para gerenciamento de proxies reversos com suporte a **Let's Encrypt**, múltiplos domínios e configuração simplificada.
