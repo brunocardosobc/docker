@@ -1,0 +1,27 @@
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+      # Aditional ports if needed
+      #- 9090:9090
+      #- 10051:10051
+    environment:
+      DB_SQLITE_FILE: /data/database.sqlite
+      # Uncomment this if IPv6 is not enabled on your host
+      DISABLE_IPV6: 'true'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - npm-frontend
+      - npm-backend
+
+networks:
+  npm-frontend
+    external: true
+  npm-backend
+    external: true
