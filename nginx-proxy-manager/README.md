@@ -31,6 +31,14 @@ Certifique-se de ter instalado:
     ```
 
 ### **2️⃣ Clonando o Repositório**
+#### 📁 Estrutura do Diretório
+
+```
+.
+├── data/
+├── letsencrypt/
+└── docker-compose.yml
+```
 ```bash
 git clone https://github.com/brunocardoso/nginx-proxy-manager.git
 cd nginx-proxy-manager
