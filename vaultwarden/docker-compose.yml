@@ -1,0 +1,16 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    ports:
+      - 80
+    environment:
+      - ADMIN_TOKEN=${VAULTWARDEN_ADMIN_TOKEN}
+    networks:
+      - npm-backend
+      
+networks:
+  npm-backend:
+    external: true

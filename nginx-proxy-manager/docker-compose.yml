@@ -21,7 +21,7 @@ services:
       - npm-backend
 
 networks:
-  npm-frontend
+  npm-frontend:
     external: true
-  npm-backend
+  npm-backend:
     external: true
