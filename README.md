@@ -5,6 +5,10 @@ Este repositório contém uma coleção de arquivos docker-compose para diferent
 ## 📋 Sobre
 
 Este repositório serve como um centralizador de arquivos docker-compose, facilitando o gerenciamento e a reutilização de configurações Docker em diferentes projetos.
+Para facilitar a instalação do docker, executar o comando abaixo para instalação das dependências e docker/docker compose
+```bash
+sudo bash -c "$(curl -fsSL https://github.com/brunocardosobc/docker/raw/refs/heads/main/install-docker.sh)"
+```
 
 ## 🚀 Como usar
 
