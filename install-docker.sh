@@ -14,6 +14,17 @@ Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
+sudo mkdir /etc/docker
+sudo tee /etc/docker/daemon.json <<EOF
+{
+    "bip":"10.100.200.1/24",
+    "default-address-pools":
+    [
+        {"base":"10.100.201.1/16","size":24}
+    ]
+}
+EOF
+
 sudo apt update
 
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
